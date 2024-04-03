@@ -3,7 +3,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import Layout from '../layouts/BlogPost.astro';
 ---
 
 <!doctype html>
@@ -14,7 +13,7 @@ import Layout from '../layouts/BlogPost.astro';
 	
 	<body>
 		<Header />
-		<main>
+		<main class="watermark-bg">
 			<h1> 🙋‍♂️¡Bienvenido a <strong>Guayabytes</strong>!🎲🎲</h1> 	
 			<p>¡Prepárate para una experiencia de juego emocionante y llena de adrenalina con 
 				<strong>Guayabytes</strong>! Este juego está diseñado para un máximo de cuatro 

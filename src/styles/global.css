@@ -48,6 +48,25 @@ main {
 	margin: auto;
 	padding: 3em 1em;
 }
+.watermark-bg {
+    padding: 20px;
+    background-image: url('../logo.png');
+    background-repeat: no-repeat;
+	backdrop-filter: blur(10px);
+}
+.watermark-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./watermark.png');
+    background-repeat: repeat;
+    background-color: rgba(255, 255, 255, 0.884); /* Fondo semi-transparente blanco */
+    filter: blur(10px); /* Aplicar desenfoque a la imagen de fondo */
+    z-index: -1; /* Colocar la capa por debajo del contenido */
+}
 h1,
 h2,
 h3,
