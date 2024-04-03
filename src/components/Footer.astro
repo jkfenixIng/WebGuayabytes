@@ -3,7 +3,11 @@ const today = new Date();
 ---
 
 <footer>
+	<div>
+		<img width={50} height={50} src="./logoGuayabitos.png" alt="Logo GuayaBitos" />
+	</div>	
 	&copy; {today.getFullYear()} Guayabitos. All rights reserved.
+	
 	<div class="social-links">
 		<a href="https://github.com/jkfenixIng/ApiGuayabytes" target="_blank">
 			<span class="sr-only">Go to GuayaBytes GitHub repo</span>
@@ -19,7 +23,7 @@ const today = new Date();
 <style>
 	footer {
 		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		background: linear-gradient(to top, rgb(150, 176, 247), transparent); no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
 	}
@@ -31,9 +35,9 @@ const today = new Date();
 	}
 	.social-links a {
 		text-decoration: none;
-		color: rgb(var(--gray));
+		color: rgb(var(--black));
 	}
 	.social-links a:hover {
-		color: rgb(var(--gray-dark));
+		color: rgb(var(--gray));
 	}
 </style>
