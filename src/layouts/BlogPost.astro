@@ -5,12 +5,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
-
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
@@ -20,13 +18,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				margin: 0;
 			}
 			.hero-image {
-				width: 100%;
+				width: 10%;
 			}
 			.hero-image img {
 				display: block;
 				margin: 0 auto;
 				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+				filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
+			}
+			.hero-image-container {
+				display: flex;
+				justify-content: center;
 			}
 			.prose {
 				width: 720px;
@@ -58,13 +60,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+				<div class="hero-image-container">
+					<div class="hero-image">
+						{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+					</div>
 				</div>
 				<div class="prose">
 					<div class="title">
 						<div class="date">
-							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
 									<div class="last-updated-on">
