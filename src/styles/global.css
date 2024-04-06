@@ -18,6 +18,7 @@
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
+	/*src: url('/fonts/atkinson-regular.woff') format('woff');*/
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -180,4 +181,17 @@ hr {
 
 .header-content h2 {
 	margin: 0;
+}
+.game-description {
+    line-height: 1.5;
+    color: #333; /* Color de texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.game-description::first-letter {
+    font-size: 30px; /* Tamaño de la primera letra */
+    color: #3a03ff; /* Color de la primera letra */
+    font-weight: bold; /* Negrita para la primera letra */
+    float: left; /* Hacer que la primera letra flote a la izquierda */
+    margin-right: 5px; /* Espaciado a la derecha de la primera letra */
 }
